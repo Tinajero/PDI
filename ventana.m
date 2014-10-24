@@ -1,4 +1,7 @@
-
+% esta funcion regresa un vector que contiene los datos de una ventana W
+% y que tiene como dimensiones tamW
+% este sirve para no pasarse de los limites cuando queresmo una ventana W
+% posicionada en los extremos
 
 
 function PixV =ventana(img, poscx, poscy, tamW ) 
