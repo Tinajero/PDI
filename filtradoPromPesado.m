@@ -4,7 +4,7 @@
 
 %clear all
 %imtool close alll
- imOriginal = imread ('images/tools3.bmp');
+ imOriginal = imread ('C:\Users\Alumnos\Documents\MATLAB/images/tools3.bmp');
  imOriginal = double(imOriginal);
  [M,N] = size( imOriginal);
  w = ones(3);
