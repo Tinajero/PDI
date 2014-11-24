@@ -2,10 +2,10 @@
 % 24 de nov 2015
 
 % podemos obtener la tdf por filas
-% lujego por columnas y tengo la tdf
+% luego por columnas y tengo la tdf
 imtool close all
 f = imread('C:\Users\Alumnos\Documents\MATLAB/images/reloj.bmp');
-f = double(f)
+f = double(f);
 F = fft2(f);
 [m,n] = size(f);
 F2 = zeros(m,n);
