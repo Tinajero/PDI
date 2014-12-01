@@ -1,8 +1,6 @@
-
-
-function HH = ideall( tam, D0)
+function HH = banda( tam, D0, w)
     
-    H = zeros( tam );
+    H = zeros(tam);
     H = double(H);
     M = tam;
     N = tam;
@@ -11,16 +9,14 @@ function HH = ideall( tam, D0)
     for i = 1:tam
         for j = 1:tam
             D = sqrt( (i-M/2)*(i-M/2) + (j-N/2)*(j-N/2));
-            if D <= D0
-                H(i,j) = 1;
+            if (D <= (D0 + w/2) )&& (D >= (D0 - w/2) )
+                H(i,j) = 0;
             else
-               H(i,j) = 0;
+               H(i,j) = 1;
             end
         end
     end
 
-   % imtool(H,[]);
-    %h = ifft2(H);
+    %imtool(H,[]);
+    %h = 
     HH = H;
-    %return H;
-%imtool(abs(real(h)),[]);
