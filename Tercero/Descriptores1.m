@@ -107,7 +107,7 @@ perimetro2 = cola1
 colaSimul = zeros(1000,2);
 
 tope = 2;
-actx = 147 ;
+actx = 100 ;
 acty = 100 ;
 
 colaSimul(1,1) = actx;
@@ -117,10 +117,11 @@ cont = 0;
 while tope ~= 1
     actx = colaSimul(tope-1, 1);
     acty = colaSimul(tope-1, 2);
+    tope = tope - 1;
     for ind = 1:4
         x = actx + movx(ind);
         y = acty + movy(ind);
-        if x > 0 && y > 0 
+        if x > 0 && y > 0 && x <= M && y <= N
         if temp(x,y) == 1
             temp(x,y) = 0;
             cont=cont+1;
@@ -134,4 +135,43 @@ while tope ~= 1
 end
 
 area1 = cont
+debu = M* N
+imtool(temp,[]);
+
+compacidad1 = area1/ ((perimetro1*perimetro1)/4*pi)
+tope2 = 2;
+act2x = 173 ;
+act2y = 236 ;
+
+cola2Simul(1,1) = act2x;
+cola2Simla(1,2) = act2y;
+temp2 = Ans2;
+cont2 = 0;
+while tope2 ~= 1
+    act2x = colaSimul(tope2-1, 1);
+    act2y = colaSimul(tope2-1, 2);
+    tope2 = tope2 - 1;
+    for ind = 1:4
+        x = act2x + movx(ind);
+        y = act2y + movy(ind);
+        if x > 0 && y > 0 && x <= M && y <= N
+        if temp2(x,y) == 1
+            temp2(x,y) = 0;
+            cont2=cont2+1;
+            colaSimul(tope2, 1) = x;
+            colaSimul(tope2, 2) = y;
+            tope2 = tope2+1;
+           
+        end
+        end
+    end
+end
+
+area2 = cont2
+
+
+compacidad2 = area2/ ((perimetro2*perimetro2)/4*pi)
+
+
+
 
