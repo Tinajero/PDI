@@ -3,7 +3,7 @@
 % exponencial
 % ecualizacion
 % autor: Daniel M 17/10/2014
-image = imread('images/bola.bmp');
+image = imread('E:\Documentos+\2015 A\PDI\PDI\imagenes\bola.bmp');
 [m,n] = size(image);
 imtool close all
 close all
