@@ -19,7 +19,7 @@ cont135 = 0;
             if(i+d <=M &&  j-d >0 && ( (ima(i,j)==a && ima(i+d,j)==b) || (ima(i,j)==a && ima(i+d,j)) ) )
                 cont90=cont90+1;
             end
-             if( j+d <=N && i +d <=M && j-d >0 && i-d > 0 && ( (ima(i,j) == a && ima(i+d,j-d) ==b)|| (ima(i,j) == a && ima(i-d,j+d) == b) ) )
+             if( j+d <=N && i +d <=M && j-d >0 && i-d > 0 && ( (ima(i,j) == a && ima(i+d,j-d) ==b ) || ( ima(i,j) == a && ima(i-d,j+d) == b) ) )
                 
                 cont135=cont135+1;
             end
